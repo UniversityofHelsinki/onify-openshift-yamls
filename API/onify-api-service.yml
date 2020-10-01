@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: onify-api
+  labels:
+    app: onify
+    tier: api
+spec:
+  selector:
+    app: onify
+    tier: api
+  ports:
+    - protocol: TCP
+      name: onify-api
+      port: 8181

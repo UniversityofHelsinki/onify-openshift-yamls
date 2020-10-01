@@ -1,0 +1,61 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: onify-dev-app
+  namespace: onify
+  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-dev-app
+  uid: 7a1dba6b-c41d-4812-94f8-ae69504eb95f
+  resourceVersion: '72817198'
+  creationTimestamp: '2020-09-30T11:29:12Z'
+  labels:
+    app: onify
+    tier: app
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2020-09-30T11:29:12Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:tier': {}
+        'f:spec':
+          'f:host': {}
+          'f:port':
+            .: {}
+            'f:targetPort': {}
+          'f:to':
+            'f:kind': {}
+            'f:name': {}
+            'f:weight': {}
+          'f:wildcardPolicy': {}
+    - manager: openshift-router
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2020-09-30T11:29:12Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:ingress': {}
+spec:
+  host: onify-dev.it.helsinki.fi
+  to:
+    kind: Service
+    name: onify-app
+    weight: 100
+  port:
+    targetPort: onify-app
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: onify-dev.it.helsinki.fi
+      routerName: default
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2020-09-30T11:29:12Z'
+      wildcardPolicy: None
+      routerCanonicalHostname: apps.ocp-prod-0.k8s.it.helsinki.fi
