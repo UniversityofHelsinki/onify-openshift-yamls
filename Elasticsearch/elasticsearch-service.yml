@@ -9,9 +9,13 @@ metadata:
 spec:
   ports:
   - port: 9200
+    targetPort: 9200
     name: client
+    protocol: TCP
   - port: 9300
+    targetPort: 9300
     name: nodes
+    protocol: TCP
   selector:
     app: onify
     tier: persistance

@@ -10,6 +10,11 @@ spec:
     app: onify
     tier: api
   ports:
-    - protocol: TCP
-      name: onify-api
+    - name: onify-api
+      protocol: TCP
       port: 8181
+      targetPort: 8181
+    - name: onify-api-443
+      protocol: TCP
+      port: 443
+      targetPort: 8181
