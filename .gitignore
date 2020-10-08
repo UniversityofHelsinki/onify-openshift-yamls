@@ -1,5 +1,3 @@
-*/hub-api-secrets.yml
-*/onify-app-secret.yml
-*/regcred-secret.yaml
+*/secrets/*
 Tauhkaa/*
 keyfile.json
