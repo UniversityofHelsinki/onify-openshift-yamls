@@ -16,6 +16,7 @@ Before you can apply everything in this repository, you need to insert the secre
 
 - **API/hub-api-secrets.yml**
 - **API/onify-api-dev-route.yml**
+- **/API/configmap.yml**
 
 - **APP/onify-app-secret.yml**
 - **APP/onify-dev-route.yml**
