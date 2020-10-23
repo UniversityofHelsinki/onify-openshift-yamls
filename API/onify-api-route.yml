@@ -1,19 +1,27 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: onify-agent-dev
+  name: onify-api-ext
   namespace: onify
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-agent-dev
-  uid: e6b69993-bb18-4f68-bec5-d5d27ccb26f5
-  resourceVersion: '76006515'
-  creationTimestamp: '2020-10-07T07:00:02Z'
+  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-api-dev
+  uid: 2a37bdd3-ece1-4075-b786-81f255a14f35
+  resourceVersion: '76008234'
+  creationTimestamp: '2020-10-07T07:05:25Z'
+  labels:
+    app: onify
+    tier: api
   managedFields:
     - manager: Mozilla
       operation: Update
       apiVersion: route.openshift.io/v1
-      time: '2020-10-07T07:00:02Z'
+      time: '2020-10-07T07:05:25Z'
       fieldsType: FieldsV1
       fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:tier': {}
         'f:spec':
           'f:host': {}
           'f:port':
@@ -33,7 +41,7 @@ metadata:
     - manager: openshift-router
       operation: Update
       apiVersion: route.openshift.io/v1
-      time: '2020-10-07T07:00:02Z'
+      time: '2020-10-07T07:05:26Z'
       fieldsType: FieldsV1
       fieldsV1:
         'f:spec':
@@ -42,18 +50,18 @@ metadata:
         'f:status':
           'f:ingress': {}
 spec:
-  host: onify-agent-dev.it.helsinki.fi
+  host: onify-api-ext.it.helsinki.fi
   to:
     kind: Service
-    name: agent-server
+    name: onify-api
     weight: 100
   port:
-    targetPort: agent-server-http
+    targetPort: onify-api-443
   tls:
     termination: edge
     certificate: |
       -----BEGIN CERTIFICATE-----
-        insert
+      insert
       -----END CERTIFICATE-----
     key: |
       -----BEGIN PRIVATE KEY-----
@@ -67,17 +75,17 @@ spec:
         insert
       -----END CERTIFICATE-----
       -----BEGIN CERTIFICATE-----
-      insert
+        insert
       -----END CERTIFICATE-----
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
 status:
   ingress:
-    - host: onify-agent-dev.it.helsinki.fi
+    - host: onify-api-dev.it.helsinki.fi
       routerName: default
       conditions:
         - type: Admitted
           status: 'True'
-          lastTransitionTime: '2020-10-07T07:00:02Z'
+          lastTransitionTime: '2020-10-07T07:05:26Z'
       wildcardPolicy: None
       routerCanonicalHostname: apps.ocp-prod-0.k8s.it.helsinki.fi
