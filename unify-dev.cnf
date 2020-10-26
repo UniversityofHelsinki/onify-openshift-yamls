@@ -35,3 +35,5 @@ subjectAltName = @alt_names
 DNS.1   = onify-ext.it.helsinki.fi
 DNS.2   = onify-api-ext.it.helsinki.fi
 DNS.3   = onify-agent-ext.it.helsinki.fi
+DNS.4   = ohjelmistojakelu.helsinki.fi
+DNS.5   = ohjelmistojakelu.it.helsinki.fi
