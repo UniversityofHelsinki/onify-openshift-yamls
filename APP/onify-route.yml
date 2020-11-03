@@ -10,6 +10,7 @@ metadata:
   labels:
     app: onify
     tier: app
+    type: external
   managedFields:
     - manager: Mozilla
       operation: Update
