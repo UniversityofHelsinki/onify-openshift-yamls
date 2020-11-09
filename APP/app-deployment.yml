@@ -21,6 +21,7 @@ spec:
       containers:
       - name: app
         image: eu.gcr.io/onify-images/hub/app:2.0.4
+        imagePullPolicy: Always
         env:
         - name: ONIFY_API_TOKEN
           valueFrom:
