@@ -1,16 +1,15 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: onify-ext
-  namespace: onify
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-ext
+  name: onify-test
+  namespace: onify-test
+  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-test
   uid: 7b164d88-a602-4f30-a249-b551fb833241
   resourceVersion: '76001823'
   creationTimestamp: '2020-10-07T06:45:32Z'
   labels:
     app: onify
     tier: app
-    type: external
   managedFields:
     - manager: Mozilla
       operation: Update
@@ -51,7 +50,7 @@ metadata:
         'f:status':
           'f:ingress': {}
 spec:
-  host: onify-ext.it.helsinki.fi
+  host: onify-test.it.helsinki.fi
   to:
     kind: Service
     name: onify-app
@@ -82,7 +81,7 @@ spec:
   wildcardPolicy: None
 status:
   ingress:
-    - host: onify-ext.it.helsinki.fi
+    - host: onify-test.it.helsinki.fi
       routerName: default
       conditions:
         - type: Admitted

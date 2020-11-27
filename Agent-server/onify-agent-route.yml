@@ -1,9 +1,9 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: onify-agent-ext
-  namespace: onify
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-agent-ext
+  name: onify-agent-test
+  namespace: onify-test
+  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-agent-test
   uid: e6b69993-bb18-4f68-bec5-d5d27ccb26f5
   resourceVersion: '76006515'
   creationTimestamp: '2020-10-07T07:00:02Z'
@@ -42,7 +42,7 @@ metadata:
         'f:status':
           'f:ingress': {}
 spec:
-  host: onify-agent-ext.it.helsinki.fi
+  host: onify-agent-test.it.helsinki.fi
   to:
     kind: Service
     name: agent-server
@@ -73,7 +73,7 @@ spec:
   wildcardPolicy: None
 status:
   ingress:
-    - host: onify-agent-ext.it.helsinki.fi
+    - host: onify-agent-test.it.helsinki.fi
       routerName: default
       conditions:
         - type: Admitted
