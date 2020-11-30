@@ -1,0 +1,35 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ohjelmistojakelu.it
+  namespace: onify-ext
+spec:
+  host: ohjelmistojakelu.it.helsinki.fi
+  to:
+    kind: Service
+    name: onify-app
+    weight: 100
+  port:
+    targetPort: onify-app2
+  tls:
+    termination: edge
+    certificate: |-
+      -----BEGIN CERTIFICATE-----
+      insert
+      -----END CERTIFICATE-----
+    key: |-
+      -----BEGIN PRIVATE KEY-----
+      insert
+      -----END PRIVATE KEY-----
+    caCertificate: |-
+      -----BEGIN CERTIFICATE-----
+      insert
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      insert
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      insert
+      -----END CERTIFICATE-----
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
