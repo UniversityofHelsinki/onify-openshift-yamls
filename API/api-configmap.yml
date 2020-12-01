@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: onify-api-config
 data:
-  NODE_ENV: test # environment test/production
+  NODE_ENV: development # environment development/production
   ENV_PREFIX: ONIFY_ #
   INTERPRET_CHAR_AS_DOT: _
   ONIFY_db_elasticsearch_host: http://elasticsearch:9200
