@@ -3,44 +3,6 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: onify-agent-test
   namespace: onify-test
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-agent-test
-  uid: e6b69993-bb18-4f68-bec5-d5d27ccb26f5
-  resourceVersion: '76006515'
-  creationTimestamp: '2020-10-07T07:00:02Z'
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-10-07T07:00:02Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:spec':
-          'f:host': {}
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:tls':
-            .: {}
-            'f:caCertificate': {}
-            'f:certificate': {}
-            'f:insecureEdgeTerminationPolicy': {}
-            'f:termination': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
-    - manager: openshift-router
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-10-07T07:00:02Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:spec':
-          'f:tls':
-            'f:key': {}
-        'f:status':
-          'f:ingress': {}
 spec:
   host: onify-agent-test.it.helsinki.fi
   to:
@@ -71,13 +33,3 @@ spec:
       -----END CERTIFICATE-----
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-status:
-  ingress:
-    - host: onify-agent-test.it.helsinki.fi
-      routerName: default
-      conditions:
-        - type: Admitted
-          status: 'True'
-          lastTransitionTime: '2020-10-07T07:00:02Z'
-      wildcardPolicy: None
-      routerCanonicalHostname: apps.ocp-prod-0.k8s.it.helsinki.fi
