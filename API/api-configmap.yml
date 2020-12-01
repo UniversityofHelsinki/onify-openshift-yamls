@@ -11,6 +11,7 @@ data:
   ONIFY_client_code: hel
   ONIFY_client_instance: test2
   ONIFY_evaluationLicense: <insert license >
+  ONIFY_initialLicense: < insert license >
   ONIFY_adminUser_username: admin
   ONIFY_adminUser_email: hello@onify.co
   ONIFY_resources_baseDir: /usr/share/onify/resources
