@@ -3,48 +3,10 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: onify-ext-app-https
   namespace: onify
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-ext-app-https
-  uid: 9ba11987-868b-46c8-9b85-fe270f2848c4
-  resourceVersion: '72900668'
-  creationTimestamp: '2020-09-30T15:46:14Z'
   labels:
     app: onify
     tier: app
     type: external
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-09-30T15:46:14Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:tier': {}
-        'f:spec':
-          'f:host': {}
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:tls':
-            .: {}
-            'f:insecureEdgeTerminationPolicy': {}
-            'f:termination': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
-    - manager: openshift-router
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-09-30T15:46:14Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:status':
-          'f:ingress': {}
 spec:
   host: onify-ext.apps.ocp-prod-0.k8s.it.helsinki.fi
   to:
@@ -57,13 +19,3 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-status:
-  ingress:
-    - host: onify-ext.apps.ocp-prod-0.k8s.it.helsinki.fi
-      routerName: default
-      conditions:
-        - type: Admitted
-          status: 'True'
-          lastTransitionTime: '2020-09-30T15:46:14Z'
-      wildcardPolicy: None
-      routerCanonicalHostname: apps.ocp-prod-0.k8s.it.helsinki.fi
