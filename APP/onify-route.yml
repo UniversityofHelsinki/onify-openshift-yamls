@@ -3,52 +3,6 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: onify-test
   namespace: onify-test
-  selfLink: /apis/route.openshift.io/v1/namespaces/onify/routes/onify-test
-  uid: 7b164d88-a602-4f30-a249-b551fb833241
-  resourceVersion: '76001823'
-  creationTimestamp: '2020-10-07T06:45:32Z'
-  labels:
-    app: onify
-    tier: app
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-10-07T06:45:32Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:tier': {}
-        'f:spec':
-          'f:host': {}
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:tls':
-            .: {}
-            'f:insecureEdgeTerminationPolicy': {}
-            'f:termination': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
-    - manager: openshift-router
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2020-10-07T06:45:32Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:spec':
-          'f:tls':
-            'f:caCertificate': {}
-            'f:certificate': {}
-            'f:key': {}
-        'f:status':
-          'f:ingress': {}
 spec:
   host: onify-test.it.helsinki.fi
   to:
@@ -79,13 +33,3 @@ spec:
       -----END CERTIFICATE-----
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-status:
-  ingress:
-    - host: onify-test.it.helsinki.fi
-      routerName: default
-      conditions:
-        - type: Admitted
-          status: 'True'
-          lastTransitionTime: '2020-10-07T06:45:32Z'
-      wildcardPolicy: None
-      routerCanonicalHostname: apps.ocp-prod-0.k8s.it.helsinki.fi
