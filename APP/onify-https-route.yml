@@ -4,7 +4,7 @@ metadata:
   name: onify-test-app-https
   namespace: onify-test
 spec:
-  host: onify-test.apps.ocp-prod-0.k8s.it.helsinki.fi
+  host: onify-app-test-https.apps.ocp-prod-0.k8s.it.helsinki.fi
   to:
     kind: Service
     name: onify-app
