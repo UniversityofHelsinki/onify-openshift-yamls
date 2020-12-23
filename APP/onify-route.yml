@@ -1,10 +1,10 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: onify-test
-  namespace: onify-test
+  name: onify
+  namespace: onify-int
 spec:
-  host: onify-test.it.helsinki.fi
+  host: onify.it.helsinki.fi
   to:
     kind: Service
     name: onify-app

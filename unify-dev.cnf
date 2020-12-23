@@ -3,7 +3,7 @@
 # openssl req -new -config myserver.cnf -keyout myserver.key -out myserver.csr
 # on the command line.
 
-FQDN = onify-ext.it.helsinki.fi # muuta per usecase
+FQDN = onify.it.helsinki.fi # muuta per usecase
 
 OU = Center for Information Technology
 ORGNAME = University of Helsinki
@@ -32,8 +32,9 @@ extendedKeyUsage=serverAuth
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1   = onify-ext.it.helsinki.fi
-DNS.2   = onify-api-ext.it.helsinki.fi
-DNS.3   = onify-agent-ext.it.helsinki.fi
-DNS.4   = ohjelmistojakelu.helsinki.fi
-DNS.5   = ohjelmistojakelu.it.helsinki.fi
+DNS.1   = onify.it.helsinki.fi
+DNS.2   = onify-api.it.helsinki.fi
+DNS.3   = onify-agent.it.helsinki.fi
+DNS.4   = onify-int.it.helsinki.fi
+DNS.5   = onify-api-int.it.helsinki.fi
+DNS.6   = onify-agent-int.it.helsinki.fi

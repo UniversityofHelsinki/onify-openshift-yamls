@@ -13,5 +13,23 @@ spec:
     targetPort: onify-api-443
   tls:
     termination: edge
+    certificate: |
+      -----BEGIN CERTIFICATE----
+       < insert value >
+      -----END CERTIFICATE-----
+    key: |
+      -----BEGIN PRIVATE KEY-----
+       < insert value >
+      -----END PRIVATE KEY-----
+    caCertificate: |
+      -----BEGIN CERTIFICATE-----
+      < insert value >
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+       < insert value >
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+       < insert value >
+      -----END CERTIFICATE-----
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
