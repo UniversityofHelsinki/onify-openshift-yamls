@@ -10,7 +10,7 @@ spec:
     name: agent-server
     weight: 100
   port:
-    targetPort: agent-server-http
+    targetPort: agent-server
   tls:
     termination: edge
     certificate: |
