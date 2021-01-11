@@ -9,7 +9,7 @@ data:
   ONIFY_db_elasticsearch_host: http://elasticsearch:9200
   ONIFY_db_indexPrefix: onify # indices will be prefixed with this string
   ONIFY_client_code: hel
-  ONIFY_client_instance: test2
+  ONIFY_client_instance: prod1
   ONIFY_evaluationLicense: <insert license >
   ONIFY_initialLicense: < insert license >
   ONIFY_adminUser_username: admin
