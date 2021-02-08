@@ -23,13 +23,13 @@ spec:
       - name: elasticsearch
         resources:
           requests:
-            memory: "1000Mi"
+            memory: "8000Mi"
           limits:
-            memory: "2000Mi"
+            memory: "10000Mi"
         image: elasticsearch:7.6.2
         env:
         - name: ES_JAVA_OPTS
-          value: -Xms1g -Xmx1g 
+          value: -Xms8g -Xmx8g 
         - name: discovery.type
           value: single-node
         - name: cluster.name
