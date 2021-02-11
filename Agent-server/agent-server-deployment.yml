@@ -16,7 +16,7 @@ spec:
      containers:
      - name: agent-server
        image: eu.gcr.io/onify-images/hub/agent-server:2
-       imagePullPolicy: Always
+       imagePullPolicy: IfNotPresent
        env:
          - name: log_level
            value: "2"
