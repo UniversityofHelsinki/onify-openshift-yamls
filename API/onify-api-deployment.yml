@@ -21,7 +21,7 @@ spec:
       containers:
       - name: api
         image: eu.gcr.io/onify-images/hub/api:2
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             memory: "2000Mi"
