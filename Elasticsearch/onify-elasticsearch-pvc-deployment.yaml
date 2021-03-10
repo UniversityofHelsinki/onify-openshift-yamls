@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+    name: onify-elasticsearch-pvc
+    namespace: onify
+spec:
+    storageClassName: pomppa25
+    resources:
+        requests:
+            storage: 10Gi
+    accessModes:
+    - ReadWriteOnce
