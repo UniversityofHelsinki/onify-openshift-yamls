@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: onify-app-config
 data:
-  NODE_ENV: production # environment
+  NODE_ENV: development # environment
   ENV_PREFIX: ONIFY_
   INTERPRET_CHAR_AS_DOT: _
   ONIFY_api_internalUrl: http://onify-api:8181/api/v2
