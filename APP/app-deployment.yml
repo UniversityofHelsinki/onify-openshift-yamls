@@ -20,7 +20,7 @@ spec:
       - name: onify-regcred
       containers:
       - name: app
-        image: eu.gcr.io/onify-images/hub/app:2.1.10
+        image: eu.gcr.io/onify-images/hub/app:2.4.2
         imagePullPolicy: IfNotPresent
         resources:
           requests:
