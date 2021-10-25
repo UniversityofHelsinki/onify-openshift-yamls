@@ -1,0 +1,37 @@
+# OpenSSL configuration file for creating a CSR for a server certificate
+# Adapt at least the FQDN and ORGNAME lines, and then run 
+# openssl req -new -config myserver.cnf -keyout myserver.key -out myserver.csr
+# on the command line.
+
+FQDN = onify-dev.it.helsinki.fi # muuta per usecase
+
+OU = Center for Information Technology
+ORGNAME = University of Helsinki
+L = Helsinki
+C = FI
+
+[ req ]
+default_bits = 4096
+default_md = sha256
+prompt = no
+encrypt_key = no
+distinguished_name = dn
+req_extensions = req_ext
+
+[ dn ]
+C = $C
+L = $L
+O = $ORGNAME
+OU = $OU
+CN = $FQDN
+
+[ req_ext ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage=serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1   = onify-test.it.helsinki.fi
+DNS.2   = onify-api-test.it.helsinki.fi
+DNS.3   = onify-agent-test.it.helsinki.fi
