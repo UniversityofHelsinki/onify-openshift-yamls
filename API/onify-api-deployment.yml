@@ -60,3 +60,8 @@ spec:
         - name: resources
           persistentVolumeClaim:
             claimName: onify-resources-pvc
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 100%
+      maxSurge: 25%

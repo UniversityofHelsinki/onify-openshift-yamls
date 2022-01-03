@@ -20,8 +20,8 @@ spec:
       - name: onify-regcred
       containers:
       - name: app
-        image: eu.gcr.io/onify-images/hub/app:2.4.2
-        imagePullPolicy: IfNotPresent
+        image: eu.gcr.io/onify-images/hub/app:2.7.3
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "1000Mi"
@@ -43,3 +43,8 @@ spec:
         ports:
         - name: app
           containerPort: 3000
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 100%
+      maxSurge: 25%
