@@ -44,10 +44,3 @@ spec:
             secretKeyRef:
               name: onify-api-secrets
               key: client_secret
-        volumeMounts:
-        - name: resources
-          mountPath: /usr/share/onify
-      volumes:
-        - name: resources
-          persistentVolumeClaim:
-            claimName: onify-resources-pvc
