@@ -20,7 +20,7 @@ spec:
        - name: onify-regcred
       containers:
       - name: worker
-        image: eu.gcr.io/onify-images/hub/api:2
+        image: eu.gcr.io/onify-images/hub/api:2.7.3
         args:
         - worker # act as worker
         envFrom:
@@ -44,10 +44,3 @@ spec:
             secretKeyRef:
               name: onify-api-secrets
               key: client_secret
-        volumeMounts:
-        - name: resources
-          mountPath: /usr/share/onify
-      volumes:
-        - name: resources
-          persistentVolumeClaim:
-            claimName: onify-resources-pvc
