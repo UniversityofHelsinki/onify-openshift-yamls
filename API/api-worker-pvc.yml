@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: onify-resources-pvc
+  name: onify-worker-resources-pvc
 spec:
   storageClassName: pomppa24
   resources:
